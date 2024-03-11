@@ -16,7 +16,7 @@ for row in ws.values:
 # Removing Columns
 print("\Deleting Columns:")
 columns_to_remove = ['Mark1','Mark2']
-for col in range(1, ws.max_column + 1):
+for col in range(ws.max_column, 1, -1):
     if ws.cell(1,col).value in columns_to_remove :
         ws.delete_cols(col)
 
